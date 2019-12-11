@@ -1,4 +1,18 @@
 @echo off
+By Mickey Belisha
+:menu
+cls
+echo/
+echo Select an option between 1-5:
+echo/
+echo A. Clean junk
+echo B. Flush NIC
+echo C. Get LAN info
+echo D. Network connections
+echo E. Ping google
+choice /c abcde /n
+goto %errorlevel%
+:1
 del /s /f /q c:\windows\temp\*.*
 rd /s /q c:\windows\temp
 md c:\windows\temp
@@ -15,7 +29,6 @@ deltree /y c:\windows\prefetch
 deltree /y c:\windows\cookies
 deltree /y c:\windows\recent
 deltree /y c:\windows\spool\printers
-del c:\WIN386.SWP
 rd /s /q "c:\windows\prefecth"
 md "c:\windows\prefecth"
 
@@ -26,3 +39,4 @@ md "c:\windows\prefecth"
  del /s /f /q %temp%\*.*
  rd /s /q %temp%
  md %temp%
+echo Junk has been cleared.
